@@ -1,0 +1,17 @@
+language: en
+pipeline:
+- name: WhitespaceTokenizer
+  case_sensitive: 'False'
+- name: CRFEntityExtractor
+  features:
+  - - low
+    - title
+    - upper
+- name: EntitySynonymMapper
+- name: CountVectorsFeaturizer
+- name: EmbeddingIntentClassifier
+policies:
+- name: MemoizationPolicy
+- name: KerasPolicy
+- name: MappingPolicy
+- name: FormPolicy

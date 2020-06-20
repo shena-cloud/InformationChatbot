@@ -1,0 +1,34 @@
+<html>
+<body>
+<div id="webchat"/>
+<script src="https://storage.googleapis.com/mrbot-cdn/webchat-0.5.8.js"></script>
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "welcome to the exponential digital solutions",
+    interval: 1000, // 1000 ms between each message
+    customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://localhost:5005",
+    socketPath: "/socket.io/",
+    title: "Faculty Bot",
+    subtitle: "Am at your service",
+    inputTextFieldHint: "Type a message...",
+    connectingText: "Waiting for server...",
+    hideWhenNotConnected: false,
+    fullScreenMode: false,
+    profileAvatar: "10xDS-Assistant.jpg",
+    openLauncherImage: 'Messages-icon.png',
+    closeLauncherImage: 'myCustomCloseImage.png',
+    params: {
+      images: {
+        dims: {
+          width: 300,
+          height: 200,
+        }
+      },
+      storage: "session"
+    }
+  })
+</script>
+</body>
+</html>

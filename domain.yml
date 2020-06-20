@@ -1,0 +1,70 @@
+session_config:
+  session_expiration_time: 0.0
+  carry_over_slots_to_new_session: false
+intents:
+- greet
+- goodbye
+- inform
+- contact_search
+- specialisation_search
+- qualification_search
+- year_search
+- affirm
+- deny
+- bot_challenge
+- thanks
+- out_of_scope
+entities:
+- faculty_name
+- contact
+- qualification
+- specialisation
+- joining_year
+- qualificaton
+- speacialisation
+- qulaification
+slots:
+  contact:
+    type: text
+  faculty_name:
+    type: text
+  joining_year:
+    type: text
+  qualification:
+    type: text
+  specialisation:
+    type: text
+templates:
+  utter_greet:
+  - text: Hey! How can I help you?
+  utter_goodbye:
+  - text: Bye
+  - text: Bye for now!
+  - text: See ya!
+  utter_how_can_i_help:
+  - text: Hello, I am a faculty information bot. How can I help you today?
+  utter_ask_inform:
+  - text: Great! What would you like to know?
+  utter_rephrase:
+  - text: Could you please rephrase it?
+  - text: Sorry, I can't give you that
+  utter_ask_faculty:
+  - text: Can you please provide the faculty's name?
+  utter_ask_facility:
+  - text: What would you like to know?
+  utter_iamabot:
+  - text: I am a chatbot designed to provide basic information about the faculties
+      of ECE Department of GCEK
+actions:
+- utter_greet
+- utter_goodbye
+- utter_iamabot
+- utter_how_can_i_help
+- utter_ask_inform
+- utter_rephrase
+- action_contact_search
+- action_qualification_search
+- action_specialisation_search
+- action_joining_year_search
+- utter_ask_faculty
+- utter_ask_facility

@@ -1,0 +1,11 @@
+1) Train model
+******************************************************
+rasa train
+
+2) Running the action server
+******************************************************
+rasa run actions
+
+3) running rasa server in socket io
+******************************************************
+rasa run --port 5005 --cors "*" --enable-api
